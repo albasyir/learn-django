@@ -23,6 +23,12 @@
           font-size: 3.5rem;
         }
       }
+
+      .site-header {
+        background-color: #343a40;
+        color: #fff;
+        padding: 0.5rem 0;
+      }
     </style>
   </head>
   <body>
@@ -51,17 +57,17 @@
             />
           </svg>
         </a>
-        <a class="py-2 d-none d-md-inline-block" href="#">Tour</a>
+        <a class="py-2 d-none d-md-inline-block" href="#">Home</a>
         <a class="py-2 d-none d-md-inline-block" href="#">Product</a>
-        <a class="py-2 d-none d-md-inline-block" href="#">Features</a>
-        <a class="py-2 d-none d-md-inline-block" href="#">Enterprise</a>
         <a class="py-2 d-none d-md-inline-block" href="#">Support</a>
-        <a class="py-2 d-none d-md-inline-block" href="#">Pricing</a>
         <a class="py-2 d-none d-md-inline-block" href="#">Cart</a>
       </nav>
     </header>
 
     <main>
+      {% block content %}{% endblock %}
+
+      <!-- 
       <div
         class="
           position-relative
@@ -265,6 +271,7 @@
           ></div>
         </div>
       </div>
+      -->
     </main>
 
     <footer class="container py-5">
@@ -331,6 +338,5 @@
         </div>
       </div>
     </footer>
-    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

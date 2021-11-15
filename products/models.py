@@ -10,7 +10,7 @@ class Product(models.Model):
     stock = models.IntegerField(default=0)
 
 
-class Offer(models.Model):
+class Voucher(models.Model):
     code = models.CharField(max_length=10)
     description = models.CharField(max_length=254)
     discount = models.FloatField()
