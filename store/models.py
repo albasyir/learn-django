@@ -46,12 +46,12 @@ class Order(models.Model):
         max_length=1, choices=PAYMENT_STATUS_TYPE, default=PAYMENT_PENDING
     )
 
+    customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
+
 
 class Address(models.Model):
     street = models.CharField(max_length=255)
     city = models.CharField(max_length=255)
 
-    # NOTE : one to one relation
-    customer = models.OneToOneField(
-        Customer, on_delete=models.CASCADE, primary_key=True
-    )
+    # NOTE : One To May Relationship
+    customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
